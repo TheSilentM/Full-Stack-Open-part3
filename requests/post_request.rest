@@ -1,0 +1,7 @@
+POST  http://localhost:3001/api/people
+content-type: application/json
+
+{
+    "name": "John Cena",
+    "number": "22-78-456321"
+}
