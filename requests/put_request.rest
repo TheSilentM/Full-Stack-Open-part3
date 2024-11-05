@@ -1,6 +1,9 @@
 PUT http://localhost:3001/api/people/671bae9f53cfa1c496e6c57c
+Content-Type: application/json
 
 {
     "name": "John Grisham",
     "number": "88-94-784562"
 }
+
+
