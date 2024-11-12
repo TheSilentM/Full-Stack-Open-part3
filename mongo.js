@@ -1,8 +1,8 @@
 const mongoose = require('mongoose')
-
+const logger = require('../utils/logger')
 
 if (process.argv.length < 3) {
-  console.log('give password as arguments')
+  logger.info('give password as arguments')
   process.exit(1)
 }
 
@@ -38,8 +38,8 @@ if (process.argv.length === 3) {
     mongoose.connection.close()
   })
 } else {
-  person.save().then(result => {
-    console.log(`added ${newName}, number ${newNumber} to phonebook`)
+  person.save().then(() => {
+    logger.info(`added ${newName}, number ${newNumber} to phonebook`)
     mongoose.connection.close()
   })
 }
